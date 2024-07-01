@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
+import { CompPrueba } from "../component/CompPrueba.jsx";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div className="container">
+			<CompPrueba datoUno={'el 1'} datoDos={'el 2'} />
 			<ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (
